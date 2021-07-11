@@ -1,0 +1,15 @@
+
+.container{
+    // margin: 30rem;
+    position: relative;
+    display: inline-block;
+    border: 1px solid red;
+}
+.search-button{
+    position: absolute;
+    outline: none;
+    background: transparent;
+    border: none;
+    top: .1rem;
+    right:1rem;
+}

@@ -1,0 +1,111 @@
+.btn_burger {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 180px;
+    width: 180px;
+    border: 2px solid black;
+    background: chartreuse;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.btn_burger__lines {
+    height: 10px;
+    width: 150px;
+    background: black;
+    border-radius: 10px;
+    transition: all .5s ease-in-out;
+    
+}
+
+.btn_burger__lines::before,
+.btn_burger__lines::after {
+    content: " ";
+    position: absolute;
+    height: 10px;
+    width: 150px;
+    background: black;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.btn_burger__lines::before {
+    transform: translateY(16px);
+}
+
+.btn_burger__lines::after {
+    transform: translateY(-16px);
+    
+}
+
+.open {
+    transform: translateX(-50px);
+    background: transparent;
+}
+
+
+.open.btn_burger__lines::before{
+    transform: rotate(45deg) translate(35px, -35px)
+}
+
+.open.btn_burger__lines::after{
+    transform: rotate(-45deg) translate(35px, 35px)
+}
+
+
+
+//**********************************************************************************************************//
+// .burger_container {
+//     position: relative;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     height: 80px;
+//     width: 80px;
+//     cursor: pointer;
+
+//     transition: all 0.5s ease-in-out;
+// }
+
+// .burger_container__line {
+//     height:5px;
+//     width:45px;
+//     background: rgb(0, 156, 39);
+//     border-radius: 10px;
+//     transition: all 0.5s ease-in-out;
+// }
+
+// .burger_container__line::before,
+// .burger_container__line::after {
+//     content: " ";
+//     position: absolute;
+//     height:5px;
+//     width:45px;
+//     background: rgb(0, 156, 39);
+//     border-radius: 10px;
+//     transition: all 0.5s ease-in-out;
+// }
+
+// .burger_container__line::before{
+//     transform: translateY(16px);
+// }
+
+// .burger_container__line::after{
+//     transform: translateY(-16px);
+// }
+
+// .open{
+//     transform: translateX(-40px);
+//     background: transparent;
+// }
+
+// .open.burger_container__line::before{
+//     transform: rotate(45deg) translate(35px, -35px)
+// }
+
+// .open.burger_container__line::after{
+//     transform: rotate(-45deg) translate(35px, 35px)
+// }

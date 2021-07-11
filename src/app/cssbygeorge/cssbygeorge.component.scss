@@ -1,0 +1,908 @@
+/*nabar*/
+/*sidebar*/
+.sidebar {
+    width: 8rem;
+    height: 100%;
+    background-color: rgb(110, 108, 108);
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.menu-icon {
+    margin-top: 3rem;
+    cursor: pointer;
+}
+
+.line {
+    height: 0.2rem;
+    width: 2.5rem;
+    background-color: rgb(14, 193, 238);
+    margin-bottom: 0.6rem;
+}
+
+.line-1,
+.line-3 {
+    width: 1.8rem;
+    transition: all 0.3s;
+}
+
+.menu-icon:hover .line {
+    width: 2.5rem;
+}
+
+.social-icon-list {
+    list-style: none;
+    padding: 0;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.social-link {
+    font-size: 2rem;
+    color: rgb(236, 178, 17);
+    transition: color 0.3s;
+}
+
+.social-link:hover {
+    color: rgb(14, 193, 238);
+}
+
+.year {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: rgb(14, 193, 238);
+}
+/*end of sidebar*/
+
+/*navigation*/
+.navigation {
+    // margin-left: 8rem;
+    left: -257px;
+    position: fixed;
+    width: 30rem;
+    height: 100%;
+    background: linear-gradient(to top, rgba(34, 32, 41, 0.9), rgba(34, 32, 41, 0.6)),
+        url(/assets/image/school_img.png) center no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-top-right-radius: 0.2rem;
+    border-bottom-right-radius: 0.2rem;
+    transition: left 0.5s cubic-bezier(1, 0, 0, 1);
+    z-index: 5;
+}
+
+.navigation-heading {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    color: #deaa86;
+    text-align: center;
+}
+
+.navigation-search {
+    position: relative;
+    display: inline-block;
+}
+
+.navigation-search-input {
+    min-width: 25rem;
+    // padding: 0rem, 1rem;
+    background-color: rgba(34, 32, 41, 0.6);
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.6rem;
+    color: #deaa86;
+    letter-spacing: 0.1rem;
+    border: 0.1rem solid #555;
+    border-radius: 10rem;
+    outline: none;
+    transition: background-color 0.3s;
+}
+.navigation-search-input:focus {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.navigation-search-button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: #deaa86;
+
+    // font-size: 1.7rem;
+    position: absolute;
+    top: 0.1rem;
+    right: 1rem;
+}
+
+.navigation-list {
+    list-style: none;
+    padding: 0;
+    height: 28rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.navigation-link {
+    color: #fff;
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.navigation-item {
+    position: relative;
+}
+
+.navigation-link::before {
+    content: " ";
+    height: 0.1rem;
+    width: 0rem;
+    background-color: #deaa86;
+    position: absolute;
+    top: 1rem;
+    left: -4rem;
+    transition: width 0.5s cubic-bezier(1, 0, 0, 1);
+}
+
+.navigation-link::after {
+    content: " ";
+    height: 0.1rem;
+    width: 0rem;
+    background-color: #deaa86;
+    position: absolute;
+    top: 1rem;
+    right: -4rem;
+    transition: width 0.5s cubic-bezier(1, 0, 0, 1);
+}
+
+.navigation-link:hover {
+    color: #deaa86;
+}
+
+.navigation-link:hover::before,
+.navigation-link:hover::after {
+    width: 3rem;
+}
+
+.copyright {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.checkbox:checked ~ .navigation {
+    left: 8rem;
+}
+
+.checkbox:checked ~ .sidebar .line-1 {
+    transform: rotate(-405deg) translate(-5px, 6px);
+    width: 2.5rem;
+}
+.checkbox:checked ~ .sidebar .line-2 {
+    opacity: 0;
+}
+
+.checkbox:checked ~ .sidebar .line-3 {
+    transform: rotate(405deg) translate(-5px, -6px);
+    width: 2.5rem;
+}
+/*end of navigation*/
+
+/*end of navbar*/
+
+/*Header*/
+
+.header {
+    margin-left: 8rem;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),
+        url(/assets/image/header-background.jpg) center left no-repeat;
+    background-size: cover;
+}
+
+.brand {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+.heading {
+    // display: flex;
+    // flex-direction: column;
+    margin-right: 10rem;
+}
+.heading > h3 {
+    padding: 0;
+    margin-bottom: 0;
+    
+}
+.heading > h2 {
+    padding: 0;
+    margin: 0;
+}
+.school-heading {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 900;
+    font-size: 2.7rem;
+    color: #de9b86;
+    // color: goldenrod;
+    letter-spacing: 0.2rem;
+}
+
+.logo{
+    position: fixed;
+}
+
+.banner {
+    color: #ddd;
+    height: 65rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.banner-heading {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 5.5rem;
+    font-weight: 600;
+    margin-bottom: 0;
+    letter-spacing: 0.3rem;
+    
+    
+
+    animation: anim 2s;
+}
+.banner-paragraph {
+    font-size: 3rem;
+    font-weight: 300;
+
+    animation: anim 1.5s 0.5s backwards;
+}
+
+.banner-button {
+    // width: 21rem;
+    margin-top: 15rem;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    outline: none;
+    font-size: x-large;
+    cursor: pointer;
+    color: rgb(99, 95, 95);
+    // letter-spacing: 0.2rem;
+    border: none;
+    background: linear-gradient(to top, goldenrod, gold);
+    animation: anim-down-arrow infinite 3s backwards;
+}
+
+.banner-button:hover {
+    background: linear-gradient(to left, goldenrod, gold);
+}
+
+.banner-button:active {
+    transform: translateY(0.2rem);
+}
+
+@keyframes anim {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes anim-down-arrow {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(10rem);
+    }
+}
+// <!-- End of Header -->
+
+// <!-- Start of About Us -->
+.aboutus {
+    margin-left: 8rem;
+    display: flex;
+    background-color: #ddd;
+}
+
+.about-us-content {
+    flex: 0 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+    box-sizing: border-box;
+}
+
+.about-us-heading {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 4rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #b85d1c;
+}
+
+.sub-heading {
+    text-align: center;
+}
+
+.small-underline {
+    width: 9rem;
+    height: 0.1rem;
+    margin: 0 auto 1rem auto;
+    background-color: #b85d1c;
+}
+.big-underline {
+    width: 20rem;
+    height: 0.1rem;
+    background-color: #b85d1c;
+}
+
+.sub-heading {
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+    font-weight: 300;
+    color: #b85d1c;
+}
+
+.about-us-paragraph {
+    font-size: 1.6rem;
+    font-style: italic;
+
+    font-weight: 350;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.about-us-images {
+    flex: 1 1;
+    position: relative;
+}
+.image {
+    width: 32rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.4);
+    border-radius: 0.4rem;
+    border: 0.2rem solid #b85d1c;
+}
+
+.image-1 {
+    transform: translate(-20%, -90%);
+    position: absolute;
+    transition: all 2s;
+}
+.image-2 {
+    transform: translate(-70%, -70%);
+    transition: all 2s;
+}
+
+.image-3 {
+    transform: translate(-50%, -50%);
+    transition: all 2s;
+}
+
+.image-4 {
+    transform: translate(-30%, -30%);
+    transition: all 2s;
+}
+
+.image-1:hover {
+    z-index: 10;
+    transform: scale(1.5) translate(-15rem, -15rem);
+    // transform: scale(1.5);
+}
+.image-2:hover {
+    z-index: 10;
+    transform: scale(1.5) translate(-15rem, -15rem);
+}
+
+.image-3:hover {
+    z-index: 10;
+    transform: scale(1.5) translate(-15rem, -15rem);
+}
+
+.image-4:hover {
+    z-index: 10;
+    transform: scale(1.5) translate(-15rem, -15rem);
+}
+
+// <!-- End of About Us -->
+
+// <!-- Start of School Facilities-->
+
+.school-facilities {
+    margin-left: 8rem;
+}
+
+.school-facilities-headers {
+    padding: 5rem 1rem;
+    text-align: center;
+    color: #b85d1c;
+}
+
+.school-facilities-heading {
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+}
+
+.small-underline {
+    width: 9rem;
+    height: 0.1rem;
+    margin: 0 auto 1rem auto;
+    background-color: #b85d1c;
+}
+.big-underline {
+    width: 20rem;
+    height: 0.1rem;
+    margin: auto;
+    background-color: #b85d1c;
+}
+
+.school-cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: space-evenly;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.school-card {
+    width: 40rem;
+    height: 50rem;
+    margin: 5rem;
+    background-color: #15141b;
+    border-radius: 1rem;
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+}
+.facilities-img {
+    width: 100%;
+    height: 50%;
+    border-radius: 1rem;
+}
+
+.school-library-content {
+    color: #ddd;
+    padding: 1rem;
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 300;
+    transition: all 0.4s;
+}
+.school-library-paragraph {
+    font-size: 1.5rem;
+    color: rgb(170, 169, 169);
+    transition: all 0.4s;
+}
+
+.school-library-content:hover {
+    color: #b85d1c;
+}
+.school-library-paragraph:hover {
+    color: #b85d1c;
+}
+// <!-- End of School Facilities-->
+
+// <!-- Messages -->
+.messages {
+    margin-left: 8rem;
+    padding-bottom: 7rem;
+    background: #15141b;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ddd;
+    font-size: 1.5rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    margin-bottom: 10rem;
+}
+
+.message-image {
+    border-radius: 50%;
+    height: 20rem;
+    width: 20rem;
+}
+
+.message {
+    text-align: left;
+    position: relative;
+    letter-spacing: 0.2rem;
+    transition: all 3s;
+}
+
+.checkbox-1:checked ~ .message-info .inner-text {
+    display: inline;
+    animation: anim 3s;
+}
+.checkbox-2:checked ~ .message-info .inner-tex2 {
+    display: inline;
+    animation: anim 3s;
+}
+
+.message-btn-arrow {
+    padding: 0;
+    font-size: xx-large;
+    color: #b85d1c;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    position: absolute;
+    right: 5rem;
+    bottom: -20px;
+    animation: anim_arrow 5s infinite;
+}
+
+@keyframes anim_arrow {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(3rem);
+    }
+}
+
+// <!--End of Messages -->
+
+// <!-- Start of footer -->
+
+.footer {
+    margin-left: 8rem;
+}
+
+.main-part {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1c1c1c;
+}
+
+.footer-heading {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: goldenrod;
+    margin: 1rem 0 3rem 0;
+}
+
+.footer-list-wrapper {
+    margin-left: 3rem;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-list-item {
+    margin-bottom: 2rem;
+}
+
+.footer-list-link {
+    font-size: 1.5rem;
+    color: #bbb;
+    text-decoration: none;
+}
+
+.contct p {
+    font-size: 1.5rem;
+    color: goldenrod;
+
+    margin-bottom: 2rem;
+}
+
+.footer-form {
+    display: flex;
+}
+
+.footer-input {
+    width: 25rem;
+    padding: 1rem;
+    font-family: "Josefin sans", sans-serif;
+    font-size: 1.8rem;
+    color: #444;
+    outline: none;
+}
+
+.footer-btn {
+    padding: 1rem;
+    background-color: #b85d1c;
+    color: #ddd;
+    border: none;
+}
+
+.footer-gallery {
+    max-width: 45rem;
+}
+
+.footer-image-wrapper {
+    width: 12rem;
+    margin: 0.4rem;
+    overflow: hidden;
+}
+
+.footer-img-gallery {
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+}
+
+.footer-galley-images {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-img-gallery:hover {
+    transform: scale(1.5);
+    opacity: 0.8;
+}
+
+.creator-part {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    padding: 0 4rem;
+}
+
+.copyright-text {
+    font-size: 1.3rem;
+    color: #aaa;
+}
+
+.text-right {
+    font-size: 1.4rem;
+    color: #bbb;
+}
+
+.text-right i {
+    font-size: 2rem;
+    margin: 0.5rem;
+    color: tomato;
+}
+.text-right span {
+    color: goldenrod;
+}
+// <!-- end of footer -->
+
+@media (max-width: 1300px) {
+    .main-part {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .school-card {
+        padding: 0;
+    }
+}
+
+@media (max-width: 1200px) {
+    .aboutus {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .school-facilities {
+        display: flex;
+        flex-direction: column;
+
+        // margin-top: 8rem;
+    }
+    .school-card {
+        width: 30rem;
+    }
+}
+@media (max-width: 740px) {
+    .footer-list-wrapper {
+        height: 30rem;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .message-image {
+        border-radius: 50%;
+        height: 10rem;
+        width: 10rem;
+    }
+    .about-us-images {
+        width: 20rem;
+    }
+    .image {
+        width: 100%;
+    }
+    .image-1:hover {
+        z-index: 10;
+        transform: scale(1.5) translate(-9rem, -10rem);
+        // transform: scale(1.5);
+    }
+    .image-2:hover {
+        z-index: 10;
+        transform: scale(1.5) translate(-9rem, -10rem);
+    }
+
+    .image-3:hover {
+        z-index: 10;
+        transform: scale(1.5) translate(-9rem, -10rem);
+    }
+
+    .image-4:hover {
+        z-index: 10;
+        transform: scale(1.5) translate(-9rem, -10rem);
+    }
+
+    .main-part {
+        display: grid;
+        grid-template-columns: 1fr;
+        // grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+    .footer-galley-images {
+        text-align: center;
+    }
+    .contct {
+        text-align: center;
+    }
+    .footer-gallery {
+        text-align: center;
+    }
+}
+
+@media (max-width: 460px) {
+    .checkbox:checked ~ .navigation {
+        left: 4rem;
+    }
+    .heading {
+        display: none;
+    }
+    .footer-form {
+        text-align: center;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .footer-input {
+        width: 25rem;
+        height: 0.2rem;
+        text-align: center;
+        border-radius: 3px;
+    }
+    .footer-btn {
+        margin-top: 1rem;
+        border-radius: 3px;
+    }
+
+    .footer-galley-images {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+
+    .contct {
+        margin-top: 5rem;
+        text-align: center;
+    }
+    .footer-gallery {
+        margin-top: 8rem;
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+    .footer-galley-images {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-img-gallery {
+        justify-content: center;
+    }
+    .card {
+        padding: 1rem;
+        margin: 0;
+    }
+
+    .banner {
+        display: flex;
+    }
+    .banner-heading {
+        font-size: x-large;
+    }
+
+    .sidebar {
+        width: 4rem;
+        height: 100%;
+        background-color: rgb(58, 56, 65);
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 10;
+    }
+
+    .navigation {
+        right: 0px;
+        left: -400px;
+    }
+
+    .header {
+        margin-left: 4rem;
+        right: 0;
+    }
+    .aboutus {
+        margin-left: 4rem;
+    }
+
+    .school-facilities {
+        margin-left: 4rem;
+    }
+
+    .school-library-heading {
+        font-size: small;
+        padding: 0;
+        margin-top: 0.2rem;
+    }
+    .footer {
+        margin-left: 4rem;
+    }
+    .message-card-wrapper {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+    .messages {
+        margin-left: 4rem;
+    }
+    .about-us-paragraph {
+        font-weight: 400;
+    }
+
+    .message {
+        font-size: smaller;
+    }
+    .school-cards-wrapper {
+        display: grid;
+        row-gap: 4rem;
+        column-gap: 2rem;
+        margin-left: 1.4rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .school-card {
+        margin-left: 2rem;
+        width: 15rem;
+        height: 20rem;
+        margin: 0rem;
+        background-color: #15141b;
+        border-radius: 1rem;
+        overflow: scroll;
+        margin-bottom: 2rem;
+    }
+}
+
